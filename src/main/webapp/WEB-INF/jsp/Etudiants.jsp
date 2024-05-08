@@ -9,14 +9,17 @@
 <table>
     <tr>
         <th>Nom</th>
+        <th>Numero</th>
+        <th>Matricule</th>
         <th>Email</th>
-        <th>Message</th>
     </tr>
     <c:forEach var="Etudiant" items="${Etudiants}">
         <tr>
             <td>${Etudiant.getNom()}</td>
+            <td>${Etudiant.getNumero()}</td>
+            <td>${Etudiant.getMatricule()}</td>
             <td>${Etudiant.getEmail()}</td>
-            <td>${Etudiant.getMessage()}</td>
+
         </tr>
     </c:forEach>
 </table>

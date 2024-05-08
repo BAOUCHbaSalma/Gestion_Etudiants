@@ -6,13 +6,23 @@
 </head>
 <body>
 <h2>Etudiant Form</h2>
-<form action="<c:url value='/saveEtudiant'/>" method="post">
+<form action="saveEtudiant" method="post">
+
+
     <label>Nom:</label>
     <input type="text" name="nom" required><br>
+
+
+    <label>Numero:</label>
+    <input type="Number" name="numero" required><br>
+
+
+    <label>matricule:</label>
+    <input type="text" name="matricule" required><br>
+
     <label>Email:</label>
     <input type="email" name="email" required><br>
-    <label>Message:</label>
-    <textarea name="message" required></textarea><br>
+
     <button type="submit">Envoyer</button>
 </form>
 </body>

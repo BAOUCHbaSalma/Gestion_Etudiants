@@ -2,8 +2,25 @@ package Beans;
 
 public class Etudiant {
     private String nom;
+    private Integer numero;
+    private String matricule;
     private String email;
-    private String message;
+
+    public Integer getNumero() {
+        return numero;
+    }
+
+    public void setNumero(Integer numero) {
+        this.numero = numero;
+    }
+
+    public String getMatricule() {
+        return matricule;
+    }
+
+    public void setMatricule(String matricule) {
+        this.matricule = matricule;
+    }
 
     // Getters and Setters
     public String getNom() {
@@ -22,11 +39,5 @@ public class Etudiant {
         this.email = email;
     }
 
-    public String getMessage() {
-        return message;
-    }
 
-    public void setMessage(String message) {
-        this.message = message;
-    }
 }
