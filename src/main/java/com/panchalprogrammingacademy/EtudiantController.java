@@ -54,8 +54,7 @@ public class EtudiantController {
     @RequestMapping("/saveNewEtudiant")
 
     public String saveNewEtudiant( Etudiant etudiante) {
-        System.out.println(etudiante.getMatricule());
-        etudiants.forEach(etudian -> System.out.println(etudian));
+
         for (Etudiant etudiant1: etudiants){
             if(etudiant1.getMatricule().equals(etudiante.getMatricule())){
                 etudiant1.setNom(etudiante.getNom());
@@ -76,8 +75,7 @@ public class EtudiantController {
 
     @RequestMapping("/etudiants")
     public String showEtudiants(Model model) {
-        System.out.println(etudiants.get(0).getMatricule());
-        System.out.println(etudiants.get(0).getNom());
+       
         model.addAttribute("Etudiants", etudiants);
         return "Etudiants";
     }

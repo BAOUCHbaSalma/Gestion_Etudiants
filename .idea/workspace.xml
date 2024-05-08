@@ -10,11 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c27db9b3-6f92-409c-8112-d3170ae517a4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/FormeModify.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Beans/Etudiant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Beans/Etudiant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/panchalprogrammingacademy/EtudiantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/panchalprogrammingacademy/EtudiantController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/Etudiants.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/Etudiants.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +176,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1714994371198</updated>
-      <workItem from="1714994372304" duration="30533000" />
+      <workItem from="1714994372304" duration="30938000" />
     </task>
     <servers />
   </component>
