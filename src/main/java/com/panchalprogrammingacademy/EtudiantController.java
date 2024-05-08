@@ -2,28 +2,73 @@ package com.panchalprogrammingacademy;
 
 
 import Beans.Etudiant;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 
 @Controller
 public class EtudiantController {
 
-    private List<Etudiant> etudiants = new ArrayList<>();
+    private static List<Etudiant> etudiants = new ArrayList<>();
 
-    @RequestMapping (value = "/" ,method = RequestMethod.GET)
+    @RequestMapping (value = "/" )
     public String showEtudiantForm(Model model) {
         model.addAttribute("Etudiant", new Etudiant());
         return "Etudiant";
     }
 
-    @RequestMapping(value = "/saveEtudiant",method = RequestMethod.POST)
+
+    @RequestMapping (value = "/deleteEtudiant/{matricule}")
+    public String DeleteEtudiant(@PathVariable("matricule") String matricule) {
+        etudiants.removeIf(etudiant -> etudiant.getMatricule().equals(matricule));
+           return "redirect:/etudiants";
+    }
+
+    @RequestMapping (value = "/modifyEtudiant/{matricule}" )
+    public String ModifyEtudiant(@PathVariable("matricule") String matricule,Model model) {
+        model.addAttribute("matricule", matricule);
+        return "redirect:/modifier";
+
+    }
+
+    @RequestMapping (value = "/modifier" )
+     public String modifiert(@ModelAttribute("matricule") String matricule, Model model){
+        Etudiant etudiant1 = etudiants.stream().filter(etudiant -> etudiant.getMatricule().equals(matricule)).collect(Collectors.toList()).get(0);
+        model.addAttribute("etudiant", etudiant1);
+        return "FormeModify";
+    }
+
+
+
+
+
+
+
+    @RequestMapping("/saveNewEtudiant")
+
+    public String saveNewEtudiant( Etudiant etudiante) {
+        System.out.println(etudiante.getMatricule());
+        etudiants.forEach(etudian -> System.out.println(etudian));
+        for (Etudiant etudiant1: etudiants){
+            if(etudiant1.getMatricule().equals(etudiante.getMatricule())){
+                etudiant1.setNom(etudiante.getNom());
+                etudiant1.setEmail(etudiante.getEmail());
+                etudiant1.setNumero(etudiante.getNumero());
+            }
+
+        }
+        return "redirect:/etudiants";
+    }
+
+
+    @RequestMapping(value = "/saveEtudiant")
     public String saveEtudiant(Etudiant etudiant) {
         etudiants.add(etudiant);
         return "redirect:/etudiants";
@@ -31,6 +76,8 @@ public class EtudiantController {
 
     @RequestMapping("/etudiants")
     public String showEtudiants(Model model) {
+        System.out.println(etudiants.get(0).getMatricule());
+        System.out.println(etudiants.get(0).getNom());
         model.addAttribute("Etudiants", etudiants);
         return "Etudiants";
     }

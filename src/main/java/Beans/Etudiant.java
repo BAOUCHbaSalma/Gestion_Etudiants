@@ -39,5 +39,13 @@ public class Etudiant {
         this.email = email;
     }
 
-
+    @Override
+    public String toString() {
+        return "Etudiant{" +
+                "nom='" + nom + '\'' +
+                ", numero=" + numero +
+                ", matricule='" + matricule + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
 }

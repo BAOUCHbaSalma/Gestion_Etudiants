@@ -19,6 +19,8 @@
             <td>${Etudiant.getNumero()}</td>
             <td>${Etudiant.getMatricule()}</td>
             <td>${Etudiant.getEmail()}</td>
+            <td><a href="deleteEtudiant/${Etudiant.getMatricule()}">Supprimer</a></td>
+            <td><a href="modifyEtudiant/${Etudiant.getMatricule()}">Modifier</a></td>
 
         </tr>
     </c:forEach>
