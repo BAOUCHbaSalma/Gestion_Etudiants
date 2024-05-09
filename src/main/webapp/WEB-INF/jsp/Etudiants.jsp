@@ -6,6 +6,13 @@
 </head>
 <body>
 <h2>Liste des Etudiants</h2>
+
+<form action="Search" method="GET">
+    <input type="text" name="nom">
+    <button type="submit">envoyer</button>
+
+</form>
+
 <table>
     <tr>
         <th>Nom</th>

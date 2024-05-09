@@ -7,7 +7,7 @@
 <body>
 <h2>Etudiant Form</h2>
 
-<form action="saveNewEtudiant" method="post">
+<form action="${pageContext.request.contextPath}/saveNewEtudiant" method="post">
 
 
   <label>Nom:</label>
