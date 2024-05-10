@@ -7,6 +7,12 @@
 </head>
 <body>
 <header>
+    <div class="navbar">
+        <a href="#home">Accueil</a>
+        <a href="#about">À propos</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </div>
 
 
 </header>
@@ -18,25 +24,57 @@
     </div>
     <div class="section_header_img"><img src="https://i.ibb.co/gMRX48V/Qu-est-ce-que-le-Lorem-Ipsum-Le-Lorem-Ipsum-est-simplement-du-faux-texte-employ-dans-la-composition.png"></div>
 </section>
-<!--<h2>Etudiant Form</h2>
+
+<section class="section_formulairte_general">
+    <h2 class="text_form">Etudiant Form</h2>
+
+    <div class="section_form_img">
+
+    <div class="section-img">
+        <img src="https://i.pinimg.com/736x/7e/35/3f/7e353fb5f0e662d5d6c55cd9302d366d.jpg">
+    </div>
+    <div class="section_formulaire">
+
 <form action="saveEtudiant" method="post">
 
 
     <label>Nom:</label>
-    <input type="text" name="nom" required><br>
+    <input type="text" id="nom" name="nom" required><br>
 
 
     <label>Numero:</label>
-    <input type="Number" name="numero" required><br>
+    <input type="Number" id="numero" name="numero" required><br>
 
 
     <label>matricule:</label>
-    <input type="text" name="matricule" required><br>
+    <input type="text" id="matricule" name="matricule" required><br>
 
     <label>Email:</label>
-    <input type="email" name="email" required><br>
+    <input type="email" id="email" name="email" required><br>
 
     <button type="submit">Envoyer</button>
-</form>!-->
+</form>
+    </div>
+    </div>
+</section>
+<section class="section_cards">
+        <h2>Our Students</h2>
+</section>
+<section class="section_cards_student">
+    <div class="section_cards_student-wrapper">
+        <div class="card">
+            <div class="card-img">
+                    <img src="https://i.ibb.co/LhdkX5B/studio-shot-good-looking-young-businesswoman-posing-against-pink-wall-with-glasses.jpg" width="100%"/>
+            </div>
+            <p>info</p>
+            <div class="card-info">
+                <h3>SALMA BEE</h3>
+                <h3>0648563803</h3>
+                <h4>salmaoussama25@gmail.com</h4>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
 </body>
 </html>

@@ -11,6 +11,7 @@ body{
     height: 100vh;
 }
 .section_header{
+    margin-top: 10px;
     background: url("https://i.ibb.co/yktZS4H/Qu-est-ce-que-le-Lorem-Ipsum-Le-Lorem-Ipsum-est-simplement-du-faux-texte-employ-dans-la-composition.png") no-repeat top right/cover;
     width: 100%;
     height: 700px;
@@ -49,4 +50,163 @@ body{
     font-weight: bold;
 
 
+}
+.navbar {
+    padding: 5px 40px;
+    overflow: hidden;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    margin-top: 15px;
+
+
+}
+
+.navbar a {
+
+    color: #ad6abd;
+    padding: 14px 14px;
+    text-decoration: none;
+}
+
+
+.navbar a:hover {
+    background-color: #d38ce3;
+    color: #fff8f8;
+    border-radius: 30px;
+}
+.text_form{
+    font-family: "Concert One", sans-serif;
+    text-align: center;
+    font-weight: 800;
+    font-size: 30px;
+    width: 200px;
+    padding: 30px 0;
+    margin: 0 auto;
+}
+.section_form_img{
+    display: flex;
+    justify-content: space-between;
+}
+.section_formulaire{
+    width: 50%;
+}
+.section-img{
+    width: 45%
+}
+.section-img img{
+    width: 100%;
+    padding: 50px;
+}
+
+
+form {
+    width: 83%;
+    margin: 0 auto;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    border: 1px solid #d38ce3;
+}
+form button{
+    padding: 13px 20px;
+    background: #ad6abd;
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+    border: none;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+input[type="text"],
+input[type="number"],
+input[type="email"]{
+    width: 100%;
+    padding: 15px 20px;
+    margin: 0 auto;
+    margin-bottom: 12px;
+    border: 2px solid #d38ce3;
+    border-radius: 9px;
+    box-sizing: border-box;
+    outline: none;
+
+}
+input::placeholder{
+    color: rgba(124, 102, 129, 0.75);
+}
+
+
+button:hover {
+    background-color: #0056b3;
+}
+.section_formulaire{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 60px;
+
+}
+.section_cards{
+    background: url("https://i.ibb.co/zr3szCr/Qu-est-ce-que-le-Lorem-Ipsum-Le-Lorem-Ipsum-est-simplement-du-faux-texte-employ-dans-la-composition.png") no-repeat top right/cover;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.section_cards h2{
+    font-family: "Concert One", sans-serif;
+    text-align: center;
+    font-weight: 800;
+    font-size: 30px;
+    width: 200px;
+    padding: 30px 0;
+    margin: 0 auto;
+}
+.section_cards_student{
+    width: 100%;
+    height: 70%;
+    background: red;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+}
+.section_cards_student-wrapper{
+    width: 80%;
+    height: 98%;
+    background: green;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+.card{
+    width: 27%;
+    padding: 10px 14px;
+    color: orangered;
+}
+.card > p{
+    padding: 8px 10px;
+    color: white;
+    background: #ad6abd;
+    border-radius: 5px;
+}
+.card-img{
+    width: 100%;
+    height: 200px;
+    border-radius: 15px;
+}
+.card-img > img {
+    border-radius: 15px;
+    height: 200px;
 }
