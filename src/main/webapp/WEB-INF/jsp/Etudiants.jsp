@@ -3,8 +3,11 @@
 <html>
 <head>
     <title>Etudiants</title>
+
 </head>
 <body>
+
+</style>
 <h2>Liste des Etudiants</h2>
 
 <form action="Search" method="GET">
