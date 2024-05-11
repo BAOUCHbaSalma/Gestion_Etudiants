@@ -6,23 +6,42 @@
     <style><%@include file="Style.css"%></style>
 </head>
 <body>
-<header>
-    <div class="img-header"><img src="https://i.ibb.co/FxSPWFC/Community-Logo.png" width="100%"/></div>
-    <div class="navbar">
-        <a href="#home" id="a1">Accueil</a>
-        <a href="#about">À propos</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-    </div>
-</header>
-<section class="section_header">
-    <div class="section_header_text">
-        <h1>Gestion ÉCOLE NUMÉRIQUE AHMED AL HANSALI</h1>
-        <p>
-            Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le </p>
-    </div>
-    <div class="section_header_img"><img src="https://i.ibb.co/gMRX48V/Qu-est-ce-que-le-Lorem-Ipsum-Le-Lorem-Ipsum-est-simplement-du-faux-texte-employ-dans-la-composition.png"></div>
+
+
+<section class="main">
+    <header>
+
+        <div class="img-header"><img src="https://i.ibb.co/FxSPWFC/Community-Logo.png" width="100%"/></div>
+        <div class="navbar">
+            <a href="${pageContext.request.contextPath}" id="a1">Home</a>
+            <a href="etudiants">Students</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </header>
+
+    <section class="section_header">
+
+
+        <div class="section_header_text">
+
+            <h2><em>Simplify</em> your administrative tasks for smoother and optimized <em>management</em></h2>
+        </div>
+
+        <div class="section_header_img"><img src="https://i.ibb.co/gMRX48V/Qu-est-ce-que-le-Lorem-Ipsum-Le-Lorem-Ipsum-est-simplement-du-faux-texte-employ-dans-la-composition.png"></div>
+    </section>
 </section>
+
+
+
+
+
+
+
+
+
+
+
 
 <section class="section_formulairte_general">
     <h2 class="text_form">Etudiant Form</h2>
@@ -56,6 +75,9 @@
     </div>
     </div>
 </section>
+
+
+
 <section class="section_cards">
         <h2>Our Students</h2>
 </section>
@@ -70,7 +92,16 @@
                 <span>Student N°: 3AW</span>
             </div>
             <div class="card-info">
-                <h2> Selma Bee</h2>
+                <div class="card-name">
+                    <h2> Selma Bee</h2>
+                    <div class="icon">
+                      <a><img src="https://i.ibb.co/4mG4sK7/1486505375-edit-pen-change-option-pencil-write-81422.png" width="100%"></a>
+                        <a><img src="https://i.ibb.co/gWJ1bfn/1486504830-delete-dustbin-empty-recycle-recycling-remove-trash-81361.png" width="100%"></a>
+                    </div>
+                </div>
+
+
+
                 <div class="cd">
                     <h3>0648563803</h3>
                     <h4>salmaoussama25@gmail.com</h4>
@@ -88,7 +119,16 @@
                 <span>Student N°: 3AW</span>
             </div>
             <div class="card-info">
-                <h2> Selma Bee</h2>
+                <div class="card-name">
+                    <h2> Selma Bee</h2>
+                    <div class="icon">
+                        <a><img src="https://i.ibb.co/4mG4sK7/1486505375-edit-pen-change-option-pencil-write-81422.png" width="100%"></a>
+                        <a><img src="https://i.ibb.co/gWJ1bfn/1486504830-delete-dustbin-empty-recycle-recycling-remove-trash-81361.png" width="100%"></a>
+                    </div>
+                </div>
+
+
+
                 <div class="cd">
                     <h3>0648563803</h3>
                     <h4>salmaoussama25@gmail.com</h4>
@@ -106,7 +146,16 @@
                 <span>Student N°: 3AW</span>
             </div>
             <div class="card-info">
-                <h2> Selma Bee</h2>
+                <div class="card-name">
+                    <h2> Selma Bee</h2>
+                    <div class="icon">
+                        <a><img src="https://i.ibb.co/4mG4sK7/1486505375-edit-pen-change-option-pencil-write-81422.png" width="100%"></a>
+                        <a><img src="https://i.ibb.co/gWJ1bfn/1486504830-delete-dustbin-empty-recycle-recycling-remove-trash-81361.png" width="100%"></a>
+                    </div>
+                </div>
+
+
+
                 <div class="cd">
                     <h3>0648563803</h3>
                     <h4>salmaoussama25@gmail.com</h4>
@@ -118,7 +167,7 @@
     </div>
 </section>
 <section class="More">
-    <button class="showMore">Show More !</button>
+    <a href="etudiants"><button class="showMore">Show More !</button></a>
 </section>
 </body>
 </body>
