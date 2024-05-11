@@ -7,14 +7,13 @@
 </head>
 <body>
 <header>
+    <div class="img-header"><img src="https://i.ibb.co/FxSPWFC/Community-Logo.png" width="100%"/></div>
     <div class="navbar">
-        <a href="#home">Accueil</a>
+        <a href="#home" id="a1">Accueil</a>
         <a href="#about">À propos</a>
         <a href="#services">Services</a>
         <a href="#contact">Contact</a>
     </div>
-
-
 </header>
 <section class="section_header">
     <div class="section_header_text">
@@ -66,14 +65,60 @@
             <div class="card-img">
                     <img src="https://i.ibb.co/LhdkX5B/studio-shot-good-looking-young-businesswoman-posing-against-pink-wall-with-glasses.jpg" width="100%"/>
             </div>
-            <p>info</p>
+            <div class="card-des">
+                <p>info</p>
+                <span>Student N°: 3AW</span>
+            </div>
             <div class="card-info">
-                <h3>SALMA BEE</h3>
-                <h3>0648563803</h3>
-                <h4>salmaoussama25@gmail.com</h4>
+                <h2> Selma Bee</h2>
+                <div class="cd">
+                    <h3>0648563803</h3>
+                    <h4>salmaoussama25@gmail.com</h4>
+                </div>
+            </div>
+            <div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-img">
+                <img src="https://i.ibb.co/LhdkX5B/studio-shot-good-looking-young-businesswoman-posing-against-pink-wall-with-glasses.jpg" width="100%"/>
+            </div>
+            <div class="card-des">
+                <p>info</p>
+                <span>Student N°: 3AW</span>
+            </div>
+            <div class="card-info">
+                <h2> Selma Bee</h2>
+                <div class="cd">
+                    <h3>0648563803</h3>
+                    <h4>salmaoussama25@gmail.com</h4>
+                </div>
+            </div>
+            <div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-img">
+                <img src="https://i.ibb.co/LhdkX5B/studio-shot-good-looking-young-businesswoman-posing-against-pink-wall-with-glasses.jpg" width="100%"/>
+            </div>
+            <div class="card-des">
+                <p>info</p>
+                <span>Student N°: 3AW</span>
+            </div>
+            <div class="card-info">
+                <h2> Selma Bee</h2>
+                <div class="cd">
+                    <h3>0648563803</h3>
+                    <h4>salmaoussama25@gmail.com</h4>
+                </div>
+            </div>
+            <div>
             </div>
         </div>
     </div>
+</section>
+<section class="More">
+    <button class="showMore">Show More !</button>
 </section>
 </body>
 </body>
