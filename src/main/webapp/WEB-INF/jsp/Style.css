@@ -363,5 +363,13 @@ button:hover {
     justify-content: center;
 }
 .modify{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background: red;
+    z-index: 999;
+    display: none;
 
 }

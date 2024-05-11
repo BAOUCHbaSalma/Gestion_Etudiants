@@ -63,43 +63,24 @@
 </c:forEach>
     </div>
 </section>
-<section class="modify">
-<section class="section_formulairte_general">
-    <h2 class="text_form">Modify Form</h2>
+<section class="modify" id="modify">
 
-    <div class="section_form_img">
-
-        <div class="section-img">
-            <img src="https://i.pinimg.com/736x/7e/35/3f/7e353fb5f0e662d5d6c55cd9302d366d.jpg">
-        </div>
-        <div class="section_formulaire">
-
-            <form action="saveEtudiant" method="post">
-
-
-                <label>Nom:</label>
-                <input type="text" id="nom" name="nom" required><br>
-
-
-                <label>Numero:</label>
-                <input type="Number" id="numero" name="numero" required><br>
-
-
-                <label>matricule:</label>
-                <input type="text" id="matricule" name="matricule" required><br>
-
-                <label>Email:</label>
-                <input type="email" id="email" name="email" required><br>
-
-                <button type="submit">Envoyer</button>
-            </form>
-        </div>
-    </div>
-</section>
 </section>
 <script>
+    const modif=document.querySelectorAll(".button-modifier");
+    const formemodif=document.getElementById("modify");
+    modif.forEach(function (e) {
+        e.addEventListener("click",()=>{
+            formemodif.style.display='flex';
+
+
+        })
+
+    })
+
 
 </script>
+
 
 </body>
 </html>

@@ -34,15 +34,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
 <section class="section_formulairte_general">
     <h2 class="text_form">Etudiant Form</h2>
 
