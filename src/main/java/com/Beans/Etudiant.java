@@ -3,8 +3,19 @@ package com.Beans;
 public class Etudiant {
     private String nom;
     private Integer numero;
-    private String matricule;
+    private Integer matricule;
+
+    public Etudiant() {
+    }
+
     private String email;
+
+    public Etudiant(String nom, Integer numero, Integer matricule, String email) {
+        this.nom = nom;
+        this.numero = numero;
+        this.matricule = matricule;
+        this.email = email;
+    }
 
     public Integer getNumero() {
         return numero;
@@ -14,11 +25,11 @@ public class Etudiant {
         this.numero = numero;
     }
 
-    public String getMatricule() {
+    public Integer getMatricule() {
         return matricule;
     }
 
-    public void setMatricule(String matricule) {
+    public void setMatricule(Integer matricule) {
         this.matricule = matricule;
     }
 

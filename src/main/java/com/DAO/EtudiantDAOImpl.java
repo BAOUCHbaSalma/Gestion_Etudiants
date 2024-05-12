@@ -1,8 +1,13 @@
 package com.DAO;
 
 import com.Beans.Etudiant;
+
+import com.Config.ConnectionDAO;
 import org.springframework.stereotype.Repository;
 
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 @Repository
@@ -22,13 +27,13 @@ public class EtudiantDAOImpl implements EtudiantDAO{
     }
 
     @Override
-    public void Delete(String matricule) {
+    public void Delete(Integer matricule) {
         etudiants.removeIf(etudiant -> etudiant.getMatricule().equals(matricule));
 
     }
 
     @Override
-    public Etudiant RecupererEtudiantByMatricule(String matricule ) {
+    public Etudiant RecupererEtudiantByMatricule(Integer matricule ) {
        for (Etudiant etudiant:etudiants){
            if (etudiant.getMatricule().equals(matricule)){
                return etudiant;
@@ -38,7 +43,7 @@ public class EtudiantDAOImpl implements EtudiantDAO{
     }
 
     @Override
-    public Etudiant ModifyEtudiant(String matricule , Etudiant etudiant) {
+    public Etudiant ModifyEtudiant(Integer matricule , Etudiant etudiant) {
         for (Etudiant etudiant1:etudiants){
             if(etudiant1.getMatricule().equals(matricule)){
                 etudiant1.setNom(etudiant.getNom());
@@ -60,4 +65,28 @@ public class EtudiantDAOImpl implements EtudiantDAO{
         }
         return etudiantsSearch;
     }
-}
+
+    @Override
+    public ArrayList<Etudiant> ShowEtudiants() throws SQLException, ClassNotFoundException {
+            ArrayList<Etudiant> etudiants1=new ArrayList<>();
+            String sql="SELECT * FROM etudiants";
+            PreparedStatement statement = ConnectionDAO.getConnection().prepareStatement(sql);
+            ResultSet resultat = statement.executeQuery();
+
+            while (resultat.next()) {
+                Integer matricule = resultat.getInt("Matricule");
+                String name=resultat.getString("Name");
+                String Email=resultat.getString("Email");
+                Integer Numero = resultat.getInt("Numero");
+
+              Etudiant et=new Etudiant(name,Numero,matricule,Email);
+              etudiants1.add(et);
+
+
+
+
+            }
+            return etudiants1;
+        }
+    }
+

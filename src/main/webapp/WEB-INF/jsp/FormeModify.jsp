@@ -38,7 +38,7 @@
         <label>Numero:</label>
         <input type="Number" id="numero" name="numero" value="${etudiant.getNumero()}" required><br>
 
-        
+
         <input type="hidden" id="matricule" name="matricule" value="${etudiant.getMatricule()}"  required><br>
 
         <label>Email:</label>

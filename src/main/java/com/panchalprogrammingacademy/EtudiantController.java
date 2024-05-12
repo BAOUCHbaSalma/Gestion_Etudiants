@@ -10,7 +10,7 @@ import org.springframework.ui.Model;
 
 import org.springframework.web.bind.annotation.*;
 
-
+import java.sql.SQLException;
 
 
 @Controller
@@ -35,8 +35,8 @@ import org.springframework.web.bind.annotation.*;
 
 
     @RequestMapping("/etudiants")
-    public String showEtudiants(Model model) {
-        model.addAttribute("Etudiants",  etudiantDAO.AfficherEtudiants());
+    public String showEtudiants(Model model) throws SQLException, ClassNotFoundException {
+        model.addAttribute("Etudiants",  etudiantDAO.ShowEtudiants());
 
         return "Etudiants";
     }
@@ -44,7 +44,7 @@ import org.springframework.web.bind.annotation.*;
 
 
     @RequestMapping(value = "/deleteEtudiant/{matricule}")
-    public String DeleteEtudiant(@PathVariable("matricule") String matricule) {
+    public String DeleteEtudiant(@PathVariable("matricule") Integer matricule) {
         etudiantDAO.Delete(matricule);
         return "redirect:/etudiants";
     }
@@ -53,7 +53,7 @@ import org.springframework.web.bind.annotation.*;
 
 
     @RequestMapping(value = "/modifyEtudiant/{matricule}")
-    public String ModifyEtudiant(@PathVariable("matricule") String matricule,Model model) {
+    public String ModifyEtudiant(@PathVariable("matricule") Integer matricule,Model model) {
       model.addAttribute("etudiant",etudiantDAO.RecupererEtudiantByMatricule(matricule));
 
         return "FormeModify";
@@ -62,7 +62,7 @@ import org.springframework.web.bind.annotation.*;
 
     @RequestMapping("/saveNewEtudiant")
 
-    public String saveNewEtudiant(@ModelAttribute("matricule") String matricule, Etudiant etudiant) {
+    public String saveNewEtudiant(@ModelAttribute("matricule") Integer matricule, Etudiant etudiant) {
 
         etudiantDAO.ModifyEtudiant(matricule, etudiant);
 
