@@ -53,7 +53,7 @@
 
     <label>Numero:</label>
     <input type="Number" id="numero" name="numero" required><br>
-    
+
     <label>Email:</label>
     <input type="email" id="email" name="email" required><br>
 

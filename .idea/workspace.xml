@@ -10,7 +10,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c27db9b3-6f92-409c-8112-d3170ae517a4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/DAO/EtudiantDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/DAO/EtudiantDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/DAO/EtudiantDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/DAO/EtudiantDAOImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/panchalprogrammingacademy/EtudiantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/panchalprogrammingacademy/EtudiantController.java" afterDir="false" />
@@ -177,7 +176,7 @@
       <updated>1714994371198</updated>
       <workItem from="1714994372304" duration="31757000" />
       <workItem from="1715181223927" duration="55947000" />
-      <workItem from="1715527561575" duration="4393000" />
+      <workItem from="1715527561575" duration="4729000" />
     </task>
     <servers />
   </component>

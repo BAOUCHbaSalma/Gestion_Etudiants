@@ -44,8 +44,8 @@ import java.sql.SQLException;
 
 
     @RequestMapping(value = "/deleteEtudiant/{matricule}")
-    public String DeleteEtudiant(@PathVariable("matricule") Integer matricule) {
-        etudiantDAO.Delete(matricule);
+    public String DeleteEtudiant(@PathVariable("matricule") Integer matricule) throws SQLException, ClassNotFoundException {
+        etudiantDAO.DeleteEtudiant(matricule);
         return "redirect:/etudiants";
     }
 

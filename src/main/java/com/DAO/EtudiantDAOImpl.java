@@ -15,13 +15,6 @@ public class EtudiantDAOImpl implements EtudiantDAO{
     private static ArrayList<Etudiant> etudiants = new ArrayList<>();
 
     @Override
-    public void Ajouter(Etudiant etudiant) {
-        etudiants.add(etudiant);
-
-    }
-
-
-    @Override
     public void Delete(Integer matricule) {
         etudiants.removeIf(etudiant -> etudiant.getMatricule().equals(matricule));
 
@@ -111,7 +104,15 @@ public class EtudiantDAOImpl implements EtudiantDAO{
             s.executeUpdate();
 
         }
+
+    @Override
+    public void DeleteEtudiant(Integer matricule) throws SQLException, ClassNotFoundException {
+        String sql = "DELETE FROM etudiants WHERE matricule = ?";
+        PreparedStatement statement = ConnectionDAO.getConnection().prepareStatement(sql);
+        statement.setInt(1, matricule);
+        statement.executeUpdate();
     }
+}
 
 
 
