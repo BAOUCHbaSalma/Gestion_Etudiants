@@ -53,7 +53,7 @@ import java.sql.SQLException;
 
 
     @RequestMapping(value = "/modifyEtudiant/{matricule}")
-    public String ModifyEtudiant(@PathVariable("matricule") Integer matricule,Model model) {
+    public String ModifyEtudiant(@PathVariable("matricule") Integer matricule,Model model) throws SQLException, ClassNotFoundException {
       model.addAttribute("etudiant",etudiantDAO.RecupererEtudiantByMatricule(matricule));
 
         return "FormeModify";
@@ -62,7 +62,7 @@ import java.sql.SQLException;
 
     @RequestMapping("/saveNewEtudiant")
 
-    public String saveNewEtudiant(@ModelAttribute("matricule") Integer matricule, Etudiant etudiant) {
+    public String saveNewEtudiant(@ModelAttribute("matricule") Integer matricule, Etudiant etudiant) throws SQLException, ClassNotFoundException {
 
         etudiantDAO.ModifyEtudiant(matricule, etudiant);
 

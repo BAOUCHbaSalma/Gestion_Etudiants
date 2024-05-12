@@ -15,32 +15,37 @@ public class EtudiantDAOImpl implements EtudiantDAO{
     private static ArrayList<Etudiant> etudiants = new ArrayList<>();
 
     @Override
-    public void Delete(Integer matricule) {
-        etudiants.removeIf(etudiant -> etudiant.getMatricule().equals(matricule));
+    public Etudiant RecupererEtudiantByMatricule(Integer matricule) throws SQLException, ClassNotFoundException {
+        String requet = "SELECT * FROM  etudiants WHERE Matricule=?";
+        PreparedStatement statement = ConnectionDAO.getConnection().prepareStatement(requet);
+        statement.setInt(1, matricule);
+        ResultSet resultat = statement.executeQuery();
+        Etudiant EtudiantRecuperer = null;
+        while (resultat.next()) {
+            Integer matricule1 = resultat.getInt("Matricule");
+            String Name = resultat.getString("Name");
+            String Email = resultat.getString("Email");
+            Integer Numero = resultat.getInt("Numero");
+            EtudiantRecuperer = new Etudiant(Name, Numero, matricule1, Email);
 
-    }
 
-    @Override
-    public Etudiant RecupererEtudiantByMatricule(Integer matricule ) {
-       for (Etudiant etudiant:etudiants){
-           if (etudiant.getMatricule().equals(matricule)){
-               return etudiant;
-           }
-       }
-       return null;
-    }
-
-    @Override
-    public Etudiant ModifyEtudiant(Integer matricule , Etudiant etudiant) {
-        for (Etudiant etudiant1:etudiants){
-            if(etudiant1.getMatricule().equals(matricule)){
-                etudiant1.setNom(etudiant.getNom());
-                etudiant1.setNumero(etudiant.getNumero());
-                etudiant1.setEmail(etudiant.getEmail());
-
-            }
         }
-        return null;
+        return EtudiantRecuperer;
+    }
+
+    @Override
+    public void ModifyEtudiant(Integer matricule , Etudiant etudiant) throws SQLException, ClassNotFoundException {
+        String sqls = "UPDATE etudiants SET Name=?, Numero=?, Email=? WHERE Matricule=?";
+        PreparedStatement s = ConnectionDAO.getConnection().prepareStatement(sqls);
+
+        s.setString(1, etudiant.getNom());
+        s.setInt(2, etudiant.getNumero());
+        s.setString(3, etudiant.getEmail());
+        s.setInt(4,matricule );
+
+
+       s.executeUpdate();
+
     }
 
 
@@ -83,10 +88,6 @@ public class EtudiantDAOImpl implements EtudiantDAO{
                 Integer Numero= resultat.getInt("Numero");
                 Etudiant SearchEtudiant=new Etudiant(Name,Numero,matricule,Email);
                 etudiantsSearch.add(SearchEtudiant);
-
-
-
-
 
             }
            return etudiantsSearch;
