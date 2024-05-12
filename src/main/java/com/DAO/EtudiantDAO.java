@@ -12,5 +12,7 @@ public interface EtudiantDAO {
     ArrayList<Etudiant> SearchEtudiant(String Name) throws SQLException, ClassNotFoundException;
     void AddEtudiant(Etudiant etudiant) throws SQLException, ClassNotFoundException;
     void DeleteEtudiant(Integer matricule) throws SQLException, ClassNotFoundException;
+    ArrayList<Etudiant>Show4Etudiants() throws SQLException, ClassNotFoundException;
+
 }
 

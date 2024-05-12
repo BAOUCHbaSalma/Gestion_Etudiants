@@ -113,6 +113,28 @@ public class EtudiantDAOImpl implements EtudiantDAO{
         statement.setInt(1, matricule);
         statement.executeUpdate();
     }
+
+    @Override
+    public ArrayList<Etudiant> Show4Etudiants() throws SQLException, ClassNotFoundException {
+        ArrayList<Etudiant> etudiantsAcceuil=new ArrayList<>();
+        String sql="SELECT * FROM etudiants LIMIT 3";
+        PreparedStatement statement = ConnectionDAO.getConnection().prepareStatement(sql);
+        ResultSet resultat = statement.executeQuery();
+        while (resultat.next()) {
+            Integer matricule = resultat.getInt("Matricule");
+            String name=resultat.getString("Name");
+            String Email=resultat.getString("Email");
+            Integer Numero = resultat.getInt("Numero");
+
+            Etudiant et=new Etudiant(name,Numero,matricule,Email);
+            etudiantsAcceuil.add(et);
+
+
+
+
+        }
+        return etudiantsAcceuil;
+    }
 }
 
 

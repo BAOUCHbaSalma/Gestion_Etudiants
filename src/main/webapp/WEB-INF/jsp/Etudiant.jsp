@@ -70,87 +70,35 @@
 </section>
 <section class="section_cards_student">
     <div class="section_cards_student-wrapper">
+<c:forEach var="Etudiant" items="${EtudiantLimit}">
         <div class="card">
             <div class="card-img">
                     <img src="https://i.ibb.co/LhdkX5B/studio-shot-good-looking-young-businesswoman-posing-against-pink-wall-with-glasses.jpg" width="100%"/>
             </div>
             <div class="card-des">
                 <p>info</p>
-                <span>Student N°: 3AW</span>
+                <span>Student N°: ${Etudiant.getMatricule()}</span>
             </div>
             <div class="card-info">
                 <div class="card-name">
-                    <h2> Selma Bee</h2>
+                    <h2> ${Etudiant.getNom()}</h2>
                     <div class="icon">
-                      <a><img src="https://i.ibb.co/4mG4sK7/1486505375-edit-pen-change-option-pencil-write-81422.png" width="100%"></a>
-                        <a><img src="https://i.ibb.co/gWJ1bfn/1486504830-delete-dustbin-empty-recycle-recycling-remove-trash-81361.png" width="100%"></a>
+                        <a href="modifyEtudiant/${Etudiant.getMatricule()}"><img src="https://i.ibb.co/4mG4sK7/1486505375-edit-pen-change-option-pencil-write-81422.png" width="100%"></a>
+                        <a href="deleteEtudiant/${Etudiant.getMatricule()}"><img src="https://i.ibb.co/gWJ1bfn/1486504830-delete-dustbin-empty-recycle-recycling-remove-trash-81361.png" width="100%"></a>
                     </div>
                 </div>
 
 
 
                 <div class="cd">
-                    <h3>0648563803</h3>
-                    <h4>salmaoussama25@gmail.com</h4>
+                    <h3>${Etudiant.getNumero()}</h3>
+                    <h4>${Etudiant.getEmail()}</h4>
                 </div>
             </div>
             <div>
             </div>
         </div>
-        <div class="card">
-            <div class="card-img">
-                <img src="https://i.ibb.co/LhdkX5B/studio-shot-good-looking-young-businesswoman-posing-against-pink-wall-with-glasses.jpg" width="100%"/>
-            </div>
-            <div class="card-des">
-                <p>info</p>
-                <span>Student N°: 3AW</span>
-            </div>
-            <div class="card-info">
-                <div class="card-name">
-                    <h2> Selma Bee</h2>
-                    <div class="icon">
-                        <a><img src="https://i.ibb.co/4mG4sK7/1486505375-edit-pen-change-option-pencil-write-81422.png" width="100%"></a>
-                        <a><img src="https://i.ibb.co/gWJ1bfn/1486504830-delete-dustbin-empty-recycle-recycling-remove-trash-81361.png" width="100%"></a>
-                    </div>
-                </div>
-
-
-
-                <div class="cd">
-                    <h3>0648563803</h3>
-                    <h4>salmaoussama25@gmail.com</h4>
-                </div>
-            </div>
-            <div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-img">
-                <img src="https://i.ibb.co/LhdkX5B/studio-shot-good-looking-young-businesswoman-posing-against-pink-wall-with-glasses.jpg" width="100%"/>
-            </div>
-            <div class="card-des">
-                <p>info</p>
-                <span>Student N°: 3AW</span>
-            </div>
-            <div class="card-info">
-                <div class="card-name">
-                    <h2> Selma Bee</h2>
-                    <div class="icon">
-                        <a><img src="https://i.ibb.co/4mG4sK7/1486505375-edit-pen-change-option-pencil-write-81422.png" width="100%"></a>
-                        <a><img src="https://i.ibb.co/gWJ1bfn/1486504830-delete-dustbin-empty-recycle-recycling-remove-trash-81361.png" width="100%"></a>
-                    </div>
-                </div>
-
-
-
-                <div class="cd">
-                    <h3>0648563803</h3>
-                    <h4>salmaoussama25@gmail.com</h4>
-                </div>
-            </div>
-            <div>
-            </div>
-        </div>
+</c:forEach>
     </div>
 </section>
 <section class="More">

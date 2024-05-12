@@ -21,8 +21,9 @@ import java.sql.SQLException;
 
 
     @RequestMapping(value = "/")
-    public String showEtudiantForm(Model model) {
+    public String showEtudiantForm(Model model) throws SQLException, ClassNotFoundException {
         model.addAttribute("Etudiant", new Etudiant());
+        model.addAttribute("EtudiantLimit",etudiantDAO.Show4Etudiants());
         return "Etudiant";
     }
 
@@ -37,7 +38,6 @@ import java.sql.SQLException;
     @RequestMapping("/etudiants")
     public String showEtudiants(Model model) throws SQLException, ClassNotFoundException {
         model.addAttribute("Etudiants",  etudiantDAO.ShowEtudiants());
-
         return "Etudiants";
     }
 
