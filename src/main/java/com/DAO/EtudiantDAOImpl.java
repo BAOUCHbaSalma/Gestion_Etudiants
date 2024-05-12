@@ -20,11 +20,6 @@ public class EtudiantDAOImpl implements EtudiantDAO{
 
     }
 
-    @Override
-    public ArrayList<Etudiant> AfficherEtudiants() {
-        System.out.println(etudiants);
-      return etudiants;
-    }
 
     @Override
     public void Delete(Integer matricule) {
@@ -55,16 +50,7 @@ public class EtudiantDAOImpl implements EtudiantDAO{
         return null;
     }
 
-    @Override
-    public ArrayList<Etudiant> SearchByName(String name) {
-        ArrayList<Etudiant> etudiantsSearch = new ArrayList<>();
-        for (Etudiant etudiant:etudiants){
-            if (etudiant.getNom().equals(name)){
-                etudiantsSearch.add(etudiant);
-            }
-        }
-        return etudiantsSearch;
-    }
+
 
     @Override
     public ArrayList<Etudiant> ShowEtudiants() throws SQLException, ClassNotFoundException {
@@ -88,5 +74,44 @@ public class EtudiantDAOImpl implements EtudiantDAO{
             }
             return etudiants1;
         }
+
+    @Override
+    public ArrayList<Etudiant> SearchEtudiant(String name) throws SQLException, ClassNotFoundException {
+        ArrayList<Etudiant> etudiantsSearch=new ArrayList<>();
+            String requet = "SELECT * FROM  etudiants WHERE Name=?";
+            PreparedStatement statement = ConnectionDAO.getConnection().prepareStatement(requet);
+            statement.setString(1,name);
+            ResultSet resultat = statement.executeQuery();
+
+            while (resultat.next()) {
+                Integer matricule= resultat.getInt("Matricule");
+                String Name=resultat.getString("Name");
+                String Email=resultat.getString("Email");
+                Integer Numero= resultat.getInt("Numero");
+                Etudiant SearchEtudiant=new Etudiant(Name,Numero,matricule,Email);
+                etudiantsSearch.add(SearchEtudiant);
+
+
+
+
+
+            }
+           return etudiantsSearch;
+
+        }
+
+    @Override
+    public void AddEtudiant(Etudiant etudiant) throws SQLException, ClassNotFoundException {
+            String sql = "INSERT INTO etudiants (Name, Numero, Email) VALUES (?,?,?)";
+            PreparedStatement s = ConnectionDAO.getConnection().prepareStatement(sql);
+
+            s.setString(1, etudiant.getNom());
+            s.setInt(2, etudiant.getNumero());
+            s.setString(3, etudiant.getEmail());
+            s.executeUpdate();
+
+        }
     }
+
+
 

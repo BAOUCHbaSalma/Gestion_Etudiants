@@ -27,9 +27,9 @@ import java.sql.SQLException;
     }
 
     @RequestMapping(value = "/saveEtudiant")
-    public String saveEtudiant(Etudiant etudiant) {
+    public String saveEtudiant(Etudiant etudiant) throws SQLException, ClassNotFoundException {
 
-        etudiantDAO.Ajouter(etudiant);
+        etudiantDAO.AddEtudiant(etudiant);
         return "redirect:/etudiants";
     }
 
@@ -73,8 +73,8 @@ import java.sql.SQLException;
 
 
     @RequestMapping(value = "/Search")
-    public String Search(@RequestParam("nom") String nom, Model model) {
-        model.addAttribute("Etudiants", etudiantDAO.SearchByName(nom));
+    public String Search(@RequestParam("nom") String nom, Model model) throws SQLException, ClassNotFoundException {
+        model.addAttribute("Etudiants", etudiantDAO.SearchEtudiant(nom));
         return "Etudiants";
     }
 
